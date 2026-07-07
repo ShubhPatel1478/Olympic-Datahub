@@ -302,8 +302,7 @@ INSERT INTO Athlete VALUES
 (61,'ETH','Selemon Barega',          '2000-01-20','Male',  1.68, 54.00,'Gemedu Dedefo',        NULL),
 (62,'UGA','Joshua Cheptegei',        '1996-09-12','Male',  1.67, 56.00,'Addy Ruiter',          NULL),
 (63,'KEN','Nicholas Kimeli',         '1996-07-14','Male',  1.65, 52.00,NULL,                   NULL),
-(64,'CHN','Kyle Chalmers',           '1998-06-05','Male',  1.96, 86.00,NULL,                   NULL),
-(65,'AUS','Kyle Chalmers',           '1998-06-05','Male',  1.96, 86.00,NULL,                   NULL);
+(64,'AUS','Kyle Chalmers',           '1998-06-05','Male',  1.96, 86.00,NULL,                   NULL);
 
 -- ============================================================
 -- 12. TEAM  (relay teams and basketball squads)
