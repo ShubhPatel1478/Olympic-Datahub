@@ -3,7 +3,6 @@ INSERT INTO Olympic_Edition VALUES
 (2, 2012, 'London',  'United Kingdom', '2012-07-27','2012-08-12','Summer','Inspire a Generation'),
 (3, 2016, 'Rio de Janeiro', 'Brazil',         '2016-08-05','2016-08-21','Summer','Live Your Passion'),
 (4, 2020, 'Tokyo',          'Japan',          '2021-07-23','2021-08-08','Summer','United by Emotion');
--- [EDGE] Tokyo 2020 physically held in 2021 due to COVID-19
 
 -- ============================================================
 -- 2. SPORT
