@@ -1,4 +1,4 @@
-# 🥇 Olympics DataHub
+# 🥇 Olympics Datahub
 
 A comprehensive **PostgreSQL-based relational database management system** designed to model and manage Olympic Games data. The project demonstrates core database design principles through **ER modeling, BCNF normalization, relational schema design, and data integrity constraints**.
 
@@ -28,7 +28,7 @@ A comprehensive **PostgreSQL-based relational database management system** desig
 ## 📂 Repository Structure
 
 ```
-Olympics-DataHub/
+Olympics-Datahub/
 │
 ├── schema/
 │   ├── create_tables.sql
