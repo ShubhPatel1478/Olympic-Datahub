@@ -1,23 +1,17 @@
-# 🏅 Olympics DataHub
+# 🥇 Olympics DataHub
 
-A comprehensive **PostgreSQL-based relational database management system** designed to model and manage Olympic Games data. The project demonstrates database design principles through **ER modeling**, **BCNF normalization**, **relational schema design**, and advanced **SQL queries** for analytical reporting.
+A comprehensive **PostgreSQL-based relational database management system** designed to model and manage Olympic Games data. The project demonstrates core database design principles through **ER modeling, BCNF normalization, relational schema design, and data integrity constraints**.
 
 ---
 
 ## 📌 Features
 
 - Designed a normalized relational database with **23 interconnected tables**.
-- Modeled Olympic editions, athletes, sports, disciplines, events, venues, countries, teams, sponsors, and broadcasting.
-- Applied **BCNF normalization** to reduce redundancy and maintain data integrity.
+- Modeled Olympic editions, athletes, sports, disciplines, events, venues, countries, teams, sponsors, contracts, and media agencies.
+- Applied **BCNF normalization** to reduce redundancy and improve data integrity.
 - Implemented **Primary Keys**, **Foreign Keys**, and **Many-to-Many relationships**.
 - Populated the database with realistic sample data.
-- Developed advanced analytical SQL queries using:
-  - JOINs
-  - Aggregate Functions
-  - Common Table Expressions (CTEs)
-  - Window Functions
-  - Ranking Functions
-  - Subqueries
+- Created **Entity Relationship (ER)** and **Relational Schema** diagrams for database visualization.
 
 ---
 
@@ -25,6 +19,7 @@ A comprehensive **PostgreSQL-based relational database management system** desig
 
 - PostgreSQL
 - SQL
+- Dia
 - ER Modeling
 - Relational Database Design
 
@@ -33,50 +28,36 @@ A comprehensive **PostgreSQL-based relational database management system** desig
 ## 📂 Repository Structure
 
 ```
-Olympics-DataHub
+Olympics-DataHub/
 │
-├── schema
+├── schema/
 │   ├── create_tables.sql
 │   └── insert_data.sql
 │
-├── queries
-│   └── analytical_queries.sql
-│
-├── diagrams
-│   ├── Olympics_ERD.dia
+├── diagrams/
 │   ├── ER_Diagram.png
-│   └── Relational_Schema.png
-│
-├── docs
-│   └── Database_Design.pdf
+│   └── SCHEMA.png
 │
 └── README.md
 ```
 
 ---
 
-## 🗂 Database Schema
+## 🗂 Database Overview
 
-The project consists of **23 normalized tables**, including:
+The database models the Olympic ecosystem through **23 normalized tables**, covering:
 
-- Olympic Edition
-- Sport
-- Discipline
-- Event
-- Venue
-- Country
-- Athlete
-- Team
-- Participation
-- Sponsor
-- Contract
-- Coach
-- Broadcast
-- Media Agency
-- Medical Test
-- Doping Test
+- Olympic Editions
+- Sports and Disciplines
+- Events and Venues
+- Athletes and Teams
+- Countries
+- Participation Records
+- Sponsors and Contracts
+- Media Agencies and Broadcasts
+- Medical and Doping Tests
 
-and multiple junction tables for many-to-many relationships.
+The schema is designed using **BCNF normalization** to minimize redundancy while maintaining referential integrity through primary and foreign key constraints.
 
 ---
 
@@ -88,31 +69,7 @@ and multiple junction tables for many-to-many relationships.
 
 ## 📑 Relational Schema
 
-![Relational Schema](diagrams/Relational_Schema.png)
-
----
-
-## 📊 Sample Analytical Queries
-
-The project includes SQL queries for various stakeholder perspectives, such as:
-
-### IOC Administrators
-- Medal tally by country
-- Running cumulative medal count
-- Event scheduling
-- Host nation performance
-- Gender participation analysis
-
-### National Olympic Committees
-- Athlete participation across editions
-- Discipline-wise athlete ranking
-- Country-wise athlete lists
-- Multi-edition medalists
-
-### Media Agencies
-- Most broadcasted events
-- Agency-wise sports coverage
-- Broadcast statistics
+![Relational Schema](diagrams/SCHEMA.png)
 
 ---
 
@@ -121,7 +78,7 @@ The project includes SQL queries for various stakeholder perspectives, such as:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/<your-username>/Olympics-DataHub.git
+git clone https://github.com/ShubhPatel1478/Olympic-Datahub.git
 ```
 
 ### 2. Create a PostgreSQL database
@@ -132,7 +89,7 @@ CREATE DATABASE olympics;
 
 ### 3. Execute the schema
 
-Run
+Run:
 
 ```
 schema/create_tables.sql
@@ -140,40 +97,31 @@ schema/create_tables.sql
 
 ### 4. Populate the database
 
-Run
+Run:
 
 ```
 schema/insert_data.sql
-```
-
-### 5. Execute analytical queries
-
-Run
-
-```
-queries/analytical_queries.sql
 ```
 
 ---
 
 ## 🎯 Learning Outcomes
 
-Through this project, we explored:
+This project strengthened my understanding of:
 
 - Relational Database Design
-- ER Modeling
+- Entity-Relationship (ER) Modeling
 - BCNF Normalization
 - Functional Dependencies
-- SQL Query Optimization
-- Window Functions
 - Database Constraints
-- Complex Joins and Aggregations
+- SQL Data Definition Language (DDL)
+- SQL Data Manipulation Language (DML)
 
 ---
 
 ## 👥 Team Members
 
-- **Shubh Patel** (Group Representative)
+- **Shubh Patel** *(Group Representative)*
 - Yajat Solanki
 - Yashrajsinh Solanki
 - Yash Oza
