@@ -154,7 +154,7 @@ CREATE SCHEMA Olympics;
      Date_of_Birth DATE,
      Gender VARCHAR(10),
      Height DECIMAL(5,2),
-     Weight VARCHAR(5),
+     DECIMAL(5,2)
      Personal_Coach VARCHAR(100),
      Contract_Id INT,
      FOREIGN KEY (NOC_Code) REFERENCES Country(NOC_Code),
