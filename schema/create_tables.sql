@@ -1,3 +1,17 @@
+/*
+==========================================================
+Olympics DataHub
+Author: Shubh Patel
+Course: IT214 - Database Management System
+Database: PostgreSQL
+
+Description:
+DDL script for creating the Olympics DataHub relational
+database consisting of 23 normalized tables.
+
+=========================================================
+*/
+
 CREATE SCHEMA Olympics;
       SET SEARCH_PATH TO Olympics;
      
@@ -12,12 +26,14 @@ CREATE SCHEMA Olympics;
       Season VARCHAR(10),
       Theme VARCHAR(255)
      );
+
       -- 2. Sport
       CREATE TABLE Sport (
       Sport_Id INT PRIMARY KEY,
       Name VARCHAR(100),
       Sport_Type VARCHAR(50)
       );
+
      -- 3. Olympic_Sport
       CREATE TABLE Olympic_Sport (
       Edition_Id INT,
@@ -56,9 +72,7 @@ CREATE SCHEMA Olympics;
    FOREIGN KEY (Venue_Id) REFERENCES Venue(Venue_Id)
    );
  
- 
- 
-      -- 7. Event_Rules
+  -- 7. Event_Rules
      CREATE TABLE Event_Rules (
     Event_Id INT,
      Rules VARCHAR(255),
@@ -82,14 +96,7 @@ CREATE SCHEMA Olympics;
    Country VARCHAR(100)
     );
  
- 
- 
- 
- 
- 
- 
- 
-  -- 10. Broadcast
+     -- 10. Broadcast
    CREATE TABLE Broadcast (
    Broadcast_Id INT PRIMARY KEY,
    Event_Id INT,
@@ -100,21 +107,12 @@ CREATE SCHEMA Olympics;
    FOREIGN KEY (Agency_Id) REFERENCES Media_Agency(Agency_Id)
     );
  
- 
- 
-   -- 11. Country
+    -- 11. Country
    CREATE TABLE Country (
    NOC_Code VARCHAR(10) PRIMARY KEY,
    Country_Name VARCHAR(100),
    Continent VARCHAR(50)
    );
- 
-   
- 
- 
- 
- 
- 
  
 -- 12. Olympic_Edition_Country
    CREATE TABLE Olympic_Edition_Country (
@@ -126,6 +124,7 @@ CREATE SCHEMA Olympics;
    FOREIGN KEY (Edition_Id) REFERENCES Olympic_Edition(Edition_Id),
    FOREIGN KEY (NOC_Code) REFERENCES Country(NOC_Code)
   );
+
 -- 13. Sponsor
    CREATE TABLE Sponsor (
    Sponsor_Id INT PRIMARY KEY,
@@ -133,6 +132,7 @@ CREATE SCHEMA Olympics;
    Industry VARCHAR(10),
    Brand_Value DECIMAL(15,2)
   );
+
 -- 14. Contract
    CREATE TABLE Contract (
    Contract_Id INT PRIMARY KEY,
@@ -160,6 +160,7 @@ CREATE SCHEMA Olympics;
      FOREIGN KEY (NOC_Code) REFERENCES Country(NOC_Code),
      FOREIGN KEY (Contract_Id) REFERENCES Contract(Contract_Id)
      );
+
 -- 16. Team
    CREATE TABLE Team (
    Team_Id INT PRIMARY KEY,
@@ -167,6 +168,7 @@ CREATE SCHEMA Olympics;
    Contract_Id INT,
    FOREIGN KEY (Contract_Id) REFERENCES Contract(Contract_Id)
     );
+
 -- 17. Athlete_Team
     CREATE TABLE Athlete_Team (
    Athlete_Id INT,
@@ -214,6 +216,7 @@ CREATE SCHEMA Olympics;
    PRIMARY KEY (Coach_Name, Team_Id),
    FOREIGN KEY (Team_Id) REFERENCES Team(Team_Id)
   );
+
 -- 22. Doping_Test
    CREATE TABLE Doping_Test (
    Test_Id INT PRIMARY KEY,
@@ -224,6 +227,7 @@ CREATE SCHEMA Olympics;
    Substance_Detected VARCHAR(100),
    FOREIGN KEY (Athlete_Id) REFERENCES Athlete(Athlete_Id)
   );
+
 -- 23. Medical_Test
    CREATE TABLE Medical_Test (
    Test_Id INT PRIMARY KEY,
